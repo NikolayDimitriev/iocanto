@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOCanto - вокальная студия Анастасии Химичевой</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            jQuery.getJSON('https://iocanto.s20.online/common/1/form/embed?id=1&lead_status_id=&lead_source_id=3',function(data){
+                jQuery('.alfacrm-form-1').replaceWith(data.form)
+            }
+        )});
+    </script>
+            <span class="alfacrm-form-1"></span>
+            <style>
+                .alfacrm-label label {color: #666} 
+                .alfacrm-control input[type=text],
+                .alfacrm-control textarea,
+                .alfacrm-control select {padding: 5px;color: #000;width: 99%} 
+                .alfacrm-error {color: red;margin-bottom: 15px;font-size: 13px} 
+                .alfacrm-submit {padding: 5px;color: #000;width: 100%;font-size: 16px}
+            </style>
+</body>
+</html>
