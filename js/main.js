@@ -29,7 +29,7 @@ jQuery(document).ready(function(){
         const div = document.createElement('div');
         div.innerHTML = `
             <label class="label">
-                <input type="checkbox" class="checkbox"> 
+                <input type="checkbox" class="checkbox" required> 
                 <span class="fake"></span>
                 <span class="text">Я соглашаюсь с <a href="#" style="text-decoration: underline;">условиями хранения персональных данных</a></span>
                 
@@ -37,4 +37,11 @@ jQuery(document).ready(function(){
         `;
         blocks[1].appendChild(div);
     }, 200)
+
+    document.querySelector('.header-arrow').addEventListener('click', () => {
+        document.querySelector('#main').scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        }); //прокручиваем скрол к объекту
+    });
 });

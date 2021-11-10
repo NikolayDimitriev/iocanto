@@ -714,6 +714,14 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.header-arrow {
+  position: absolute;
+  z-index: 10;
+  bottom: 5%;
+  left: 5%;
+  cursor: pointer;
+}
+
 .alfacrm-control input[type=text] {
   padding: 8px;
   width: 100%;
@@ -803,6 +811,11 @@ img {
   font-size: 14px;
   line-height: 130%;
   color: #FFFFFF;
+}
+
+.main {
+  background: linear-gradient(73.05deg, #544C77 0.04%, #314B70 29.72%, #314B70 75.01%, #544C77 100%);
+  margin-top: -20px;
 }
 
 @media (min-width: 1200px) {
