@@ -1,0 +1,68 @@
+.team
+    padding-top: 100px
+    padding-bottom: 100px
+    &-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+    &-title
+        &__extra
+            font-size: 30px
+            line-height: 120%
+            color: #FEDA2F
+            display: inline-block
+            margin-bottom: 10px
+        &__main
+            margin-top: 0
+            margin-bottom: 70px
+            font-family: "GothamPro-Bold", sans-serif
+            font-weight: bold;
+            font-size: 70px
+            line-height: 120%
+            text-transform: uppercase
+            color: #000
+    &-block
+        &__slide
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+        &__image
+            width: 370px
+            height: 440px
+            object-fit: cover
+            border-radius: 10px
+            margin-bottom: 20px
+        &__name
+            font-size: 18px
+            line-height: 160%
+            color: #000
+            display: inline-block
+            margin-bottom: 5px
+        &__desc
+            font-size: 14px;
+            line-height: 160%;
+            color: rgba(61, 62, 62, .7)
+        &__btn
+            position: absolute
+            width: 80px
+            height: 120px
+            top: 45%
+            transform: translateY(-50%)
+            border: none
+            z-index: 10
+            cursor: pointer
+            background-repeat: no-repeat
+            background-position: center
+            background-color: transparent
+            &--next
+                background-image: url(../img/team/arrow.svg)
+                right: 0
+            &--prev
+                background-image: url(../img/team/arrow.svg)
+                left: 0
+                top: 30%
+                transform: rotate(180deg)
+    &-swiper
+        position: relative
+

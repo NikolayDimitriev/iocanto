@@ -46,7 +46,7 @@ jQuery(document).ready(function(){
     });
 
     // SLIDER
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.main-swiper.swiper', {
         // Navigation arrows
         navigation: {
           nextEl: '.swiper-button-next',
@@ -54,6 +54,7 @@ jQuery(document).ready(function(){
         }
       
     });
+    
     const backBtn = document.querySelector('.main-button');
     const swiperSlides = document.querySelectorAll('.main-slider__slide');
 
@@ -101,6 +102,19 @@ jQuery(document).ready(function(){
         `;
 
         wrapper.appendChild(movie);
+    });
+
+    // КОМАНДА
+    const swiperTeam = new Swiper('.team-swiper', {
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 80,
+        // Navigation arrows
+        navigation: {
+          nextEl: '.team-block__btn.team-block__btn--next',
+          prevEl: '.team-block__btn.team-block__btn--prev',
+        }
+      
     });
 
 });

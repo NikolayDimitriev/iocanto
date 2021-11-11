@@ -1382,6 +1382,114 @@ img {
   width: 100px;
 }
 
+.team {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.team-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team-title__extra {
+  font-size: 30px;
+  line-height: 120%;
+  color: #FEDA2F;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.team-title__main {
+  margin-top: 0;
+  margin-bottom: 70px;
+  font-family: "GothamPro-Bold", sans-serif;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.team-block__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team-block__image {
+  width: 370px;
+  height: 440px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.team-block__name {
+  font-size: 18px;
+  line-height: 160%;
+  color: #000;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.team-block__desc {
+  font-size: 14px;
+  line-height: 160%;
+  color: rgba(61, 62, 62, 0.7);
+}
+
+.team-block__btn {
+  position: absolute;
+  width: 80px;
+  height: 120px;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: none;
+  z-index: 10;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+.team-block__btn--next {
+  background-image: url(../img/team/arrow.svg);
+  right: 0;
+}
+
+.team-block__btn--prev {
+  background-image: url(../img/team/arrow.svg);
+  left: 0;
+  top: 30%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.team-swiper {
+  position: relative;
+}
+
 @media (min-width: 1200px) {
   a:hover, button:hover {
     cursor: pointer;
