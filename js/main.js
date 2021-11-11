@@ -75,4 +75,32 @@ jQuery(document).ready(function(){
         });
     });
 
+    // ВИДЕО "КАК СТАТЬ ЗВЕЗДОЙ"
+    const video = document.querySelector('.video');
+
+    video.querySelector('.video-wrapper__image').addEventListener('click', () => {
+        const wrapper = video.querySelector('.video-wrapper');
+        const height = wrapper.clientHeight;
+        const width = wrapper.clientWidth;
+
+        video.querySelector('.video-wrapper__block').style.display = 'none';
+
+        const movie = document.createElement('div');
+        movie.innerHTML = `
+            <iframe width="${width}" height="${height}" src="https://www.youtube.com/embed/-nVJH76NJ4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        `;
+        movie.style.cssText = `
+            width: 100%;
+            height: 100%;
+        `;
+
+        wrapper.style.cssText = `
+            width: ${width}px;
+            height: ${height}px;
+            background: none;
+        `;
+
+        wrapper.appendChild(movie);
+    });
+
 });
