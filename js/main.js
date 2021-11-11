@@ -3,9 +3,9 @@ jQuery(document).ready(function(){
     jQuery.getJSON('https://iocanto.s20.online/common/2/form/embed?id=2&lead_status_id=&lead_source_id=3',function(data){
         jQuery('.alfacrm-form-2').replaceWith(data.form)
     })
-
+    
+    // HEADER
     setTimeout(()=>{
-        // HEADER
         const header = document.querySelector('.header');
 
         const headerForm = header.querySelector('form');
@@ -44,4 +44,35 @@ jQuery(document).ready(function(){
             block: "start"
         }); //прокручиваем скрол к объекту
     });
+
+    // SLIDER
+    const swiper = new Swiper('.swiper', {
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.main-button.swiper-button--prev',
+        }
+      
+    });
+    const backBtn = document.querySelector('.main-button');
+    const swiperSlides = document.querySelectorAll('.main-slider__slide');
+
+    if (swiperSlides[0].classList.contains('swiper-slide-active')) {
+        backBtn.style.display = 'none';
+    }
+
+    document.querySelectorAll(".main-center__btn").forEach((item) => {
+        item.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            item.style.backgroundColor = "#FEDA2F";
+            item.style.border = "1px solid #FEDA2F";
+
+            swiper.slideNext(500, false);
+
+            if (backBtn.style.display === 'none');
+                backBtn.style.display = 'flex';
+        });
+    });
+
 });

@@ -8,6 +8,7 @@
     <title>IOCanto - музыкальная студия</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -102,8 +103,8 @@
 
     </header>
 
-    <section class="main" id="main">
-        <div class="main-up">
+    <section class="main" >
+        <div class="main-up" id="main">
             <div class="container">
                 <div class="main-swiper swiper">
                     <!-- Additional required wrapper -->
@@ -120,7 +121,7 @@
                             <div class="main-center">
                                 <div class="main-center__block">
                                     <img src="img/main/center-step-1.svg" alt="Шаг 1 из 4">
-                                    <div class="main-center-text">
+                                    <div class="main-center__text">
                                         <span class="main-center__step">Шаг 1 из 4</span>
                                         <h2 class="main-center__title">Как вы оцениваете ваш <br> музыкальный уровень?</h2>
                                     </div>
@@ -135,6 +136,10 @@
                                     <button class="main-center__btn">
                                         <h2 class="main-center__strong">Есть опыт</h2>
                                         <span class="main-center__extra">Уже были занятия или закончил <br> музыкальную школу</span>
+                                    </button>
+                                    <button class="main-center__btn">
+                                        <h2 class="main-center__strong">Продвинутый</h2>
+                                        <span class="main-center__extra">Занимаюсь музыкой давно</span>
                                     </button>
                                     <button class="main-center__btn">
                                         <h2 class="main-center__strong">Продвинутый</h2>
@@ -163,7 +168,7 @@
                             <div class="main-center">
                                 <div class="main-center__block">
                                     <img src="img/main/center-step-2.svg" alt="Шаг 2 из 4">
-                                    <div class="main-center-text">
+                                    <div class="main-center__text">
                                         <span class="main-center__step">Шаг 2 из 4</span>
                                         <h2 class="main-center__title">Какое направление <br> вам интересно?</h2>
                                         
@@ -207,7 +212,7 @@
                             <div class="main-center">
                                 <div class="main-center__block">
                                     <img src="img/main/center-step-3.svg" alt="Шаг 3 из 4">
-                                    <div class="main-center-text">
+                                    <div class="main-center__text">
                                         <span class="main-center__step">Шаг 3 из 4</span>
                                         <h2 class="main-center__title">Какова Ваша цель?</h2>
                                     </div>
@@ -251,7 +256,7 @@
                             <div class="main-center">
                                 <div class="main-center__block">
                                     <img src="img/main/center-step-4.svg" alt="Шаг 4 из 4">
-                                    <div class="main-center-text">
+                                    <div class="main-center__text">
                                         <span class="main-center__step">Шаг 4 из 4</span>
                                         <h2 class="main-center__title">Ваши контакты для связи</h2>
                                         <span class="main-center__subtitle">Мы свяжемся с вами и подберем удобное время для пробного урока.</span>
@@ -261,8 +266,8 @@
                                 <!-- /.main-center__block -->
                                 <div class="main-center__form">
                                     <span class="alfacrm-form-2"></span>
+                                    <img src="img/main/main-center-icon.svg" alt="Иконка" class="main-center__icon">
                                 </div>
-                                <img src="img/main/main-center-icon.svg" alt="Иконка" class="main-center__icon">
                             </div>
                             <!-- /.main-center -->
                             <div class="main-right">
@@ -287,7 +292,45 @@
         <!-- /.main-up -->
         <div class="main-down">
             <div class="main-container">
-
+                <div class="main-down__block">
+                    <img src="img/main/iocanto-down.svg" alt="Логотип IOCanto" class="main-down__logo">
+                    <div class="main-down__info">
+                        <div class="main-down__left">
+                            <h2 class="main-down__title">музыкальная студия</h2>
+                            <p class="main-down__text">С 2016 года мы объединяем людей по интересам, развиваем таланты учеников с помощью тонкого индивидуального педагогического подхода. За это время мы обучили более 3000 человек. Многие из них стали лауреатами Российских и Международных конкурсов, являются постоянными участниками городских фестивалей и мероприятий. 
+                               <br><br> 100 % учеников прошедших подготовку у нас поступили в музыкальные школы, колледжи, ВУЗы.</p>
+                        </div>
+                        <!-- /.main-down__left -->
+                        <div class="main-down__right">
+                            <div class="main-down__item">
+                                <span class="main-down__num">80%</span>
+                                <span class="main-down__desc">Учеников пришли <br>
+                                    по рекомендации</span>
+                            </div>
+                            <!-- /.main-down__item -->
+                            <div class="main-down__item">
+                                <span class="main-down__num">400</span>
+                                <span class="main-down__desc">Учеников ежемесячно <br>
+                                    обучаются в студии</span>
+                            </div>
+                            <!-- /.main-down__item -->
+                            <div class="main-down__item">
+                                <span class="main-down__num">120</span>
+                                <span class="main-down__desc">Человек уже поступили 
+                                    в&nbsp;профессиональные учебные заведения</span>
+                            </div>
+                            <!-- /.main-down__item -->
+                            <div class="main-down__item">
+                                <span class="main-down__num">40</span>
+                                <span class="main-down__desc">Минимальное количество концертов и мероприятий в&nbsp;год</span>
+                            </div>
+                            <!-- /.main-down__item -->
+                        </div>
+                        <!-- /.main down__right -->
+                    </div>
+                    <!-- /.main-down__info -->
+                </div>
+                <!-- /.main-down__block -->
             </div>
             <!-- /.main-container -->
         </div>
@@ -299,6 +342,7 @@
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>

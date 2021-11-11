@@ -1,3 +1,199 @@
 .main
     background: linear-gradient(73.05deg, #544C77 0.04%, #314B70 29.72%, #314B70 75.01%, #544C77 100%)
     margin-top: -20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    &-container
+        max-width: 1140px
+        margin: auto
+    &-up
+        padding-top: 200px
+    &-slider
+        &__slide
+            display: flex
+            align-items: center
+    &-left
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: 50px
+        background: rgba(0, 0, 0, .35)
+        border-radius: 15px 0 0 15px
+        height: 100%
+        z-index: 2
+        &__title
+            font-family: "GothamPro-Black", sans-serif
+            margin: 0
+            margin-bottom: 20px
+            font-size: 70px
+            line-height: 120%
+            text-transform: uppercase
+            color: #FFFFFF
+        &__subtitle
+            display: inline-block
+            margin-bottom: 36px
+            font-size: 30px
+            line-height: 140%
+            text-transform: uppercase
+            color: #FEDA2F
+    &-center
+        padding-left: 60px
+        padding-top: 40px
+        padding-right: 60px
+        padding-bottom: 72px
+        background-color: #fff
+        height: 100%
+        &__block
+            margin-bottom: 30px
+            height: 146px
+            max-height: 146px
+            & img
+                display: none
+        &__step
+            display: none
+        &__text
+            background: url(../img/main/title-bg.svg) no-repeat
+            background-size: cover
+            padding: 25px 30px
+            height: 100%
+            width: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+        &__title
+            margin: 0
+            font-family: "GothamPro-Bold", sans-serif
+            font-weight: bold
+            font-size: 40px
+            line-height: 120%
+            color: #000000
+        &__subtitle
+            font-size: 16px
+            line-height: 150%
+        &__respons
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            align-items: center
+            max-width: 870px
+            width: 100%
+        &__btn
+            width: 48%
+            height: 138px
+            margin-bottom: 30px
+            background-color: #fff
+            border: 1px solid #000
+            border-radius: 5px
+        &__strong
+            margin: 0
+            font-family: "GothamPro-Bold", sans-serif
+            font-weight: bold
+            font-size: 25px
+            line-height: 150%
+            text-transform: uppercase
+        &__extra
+            display: inline-block
+            margin-top: 6px
+            font-size: 16px;
+            line-height: 140%;
+        &__form
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            max-width: 870px
+            width: 870px
+    &-right
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        background-color: #fff
+        height: 100%
+        padding-top: 60px
+        padding-right: 60px
+        padding-bottom: 107px
+        border-radius: 0 15px 15px 0
+        &__logo
+            margin-bottom: 25px
+    &-swiper
+        position: relative
+    &-button
+        position: absolute
+        left: 30%
+        bottom: 5%
+        z-index: 1
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border: none
+        background-color: #fff
+        &__arrow
+            display: inline-block
+            width: 40px
+            height: 2px
+            background-color: rgba(0, 0, 0, .3)
+        &__left
+            font-family: "GothamPro-Bold", sans-serif
+            font-weight: bold
+            color: rgba(0, 0, 0, .3)
+            font-size: 22px
+            line-height: 21px
+            letter-spacing: 0.1em
+            text-transform: uppercase
+            margin-left: 20px
+    &-down
+        padding-top: 200px
+        padding-bottom: 100px
+        &__block
+            display: flex
+            flex-direction: column
+            color: #FFFFFF
+        &__logo
+            width: 327px
+            height: 100px
+            margin-bottom: 30px
+        &__info
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+        &__left
+            max-width: 570px
+        &__title
+            margin: 0
+            margin-bottom: 50px
+            font-family: "GothamPro-Bold", sans-serif
+            font-weight: bold
+            font-size: 80px
+            line-height: 100%
+        &__text
+            font-size: 22px
+            line-height: 160%
+        &__right
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            align-items: center
+            margin-left: 80px
+            padding-top: 20px
+        &__item
+            max-width: 218px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            flex-basis: 48%
+            margin-bottom: 73px
+        &__num
+            display: inline-block
+            margin-bottom: 20px
+            font-family: "GothamPro-Bold", sans-serif
+            font-weight: bold
+            font-size: 60px
+            line-height: 57px
+            color: #FEDA2F
+        &__desc
+            font-size: 16px
+            line-height: 150%
+.swiper 
+  width: 100%
+  height: 100%
+
