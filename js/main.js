@@ -121,7 +121,7 @@ jQuery(document).ready(function(){
     const saleCard = document.querySelectorAll('.cost-sale__card');
 
     saleCard.forEach(item => {
-        item.addEventListener('mouseover', () => {
+        item.addEventListener('mouseenter', () => {
             item.querySelector('.cost-sale__price').style.display = 'none';
             item.querySelector('.cost-sale__subtitle').style.display = 'inline-block';
         });
@@ -129,6 +129,30 @@ jQuery(document).ready(function(){
         item.addEventListener('mouseleave', () => {
             item.querySelector('.cost-sale__price').style.display = 'inline-block';
             item.querySelector('.cost-sale__subtitle').style.display = 'none';
+        });
+    });
+
+    // РЕЗУЛЬТАТ
+    const btnPlay = document.querySelectorAll('.result-block__image');
+
+    btnPlay.forEach(item => {
+        const src = item.getAttribute("src");
+        const srcH = item.getAttribute("data-image-src");
+
+        item.addEventListener("mouseenter", () => {
+            const index = item.src.indexOf("img/");
+
+            if (item.src.substring(index) == src) 
+                item.src = srcH;
+
+        });
+
+        item.addEventListener("mouseleave", () => {
+            const index = item.src.indexOf("img/");
+
+            if (item.src.substring(index) == srcH) 
+                item.src = src;
+
         });
     });
 
