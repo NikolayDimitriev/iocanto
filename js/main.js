@@ -117,4 +117,19 @@ jQuery(document).ready(function(){
       
     });
 
+    // СТОИМОСТЬ
+    const saleCard = document.querySelectorAll('.cost-sale__card');
+
+    saleCard.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            item.querySelector('.cost-sale__price').style.display = 'none';
+            item.querySelector('.cost-sale__subtitle').style.display = 'inline-block';
+        });
+
+        item.addEventListener('mouseleave', () => {
+            item.querySelector('.cost-sale__price').style.display = 'inline-block';
+            item.querySelector('.cost-sale__subtitle').style.display = 'none';
+        });
+    });
+
 });
