@@ -837,6 +837,10 @@ img {
   padding-top: 200px;
 }
 
+.main-slider {
+  height: 625px;
+}
+
 .main-slider__slide {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -991,6 +995,21 @@ img {
           align-items: flex-end;
   max-width: 870px;
   width: 870px;
+}
+
+.main-form {
+  width: 530px;
+  padding-top: 30px;
+}
+
+.main-form__block {
+  width: 100%;
+  margin-bottom: 52px;
+}
+
+.main-form__input {
+  color: #000 !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5) !important;
 }
 
 .main-right {

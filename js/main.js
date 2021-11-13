@@ -76,6 +76,30 @@ jQuery(document).ready(function(){
         });
     });
 
+    setTimeout(()=>{
+        const mainSwiper = document.querySelector('.main-swiper');
+
+        const mainSwiperForm = mainSwiper.querySelector('form');
+        mainSwiperForm.classList.add('main-form');
+        
+        mainSwiperForm.querySelectorAll('.alfacrm-control').forEach(item => {
+            item.classList.add('main-form__block');
+            item.children[0].classList.add('main-form__input');
+        });
+
+        const inputs = mainSwiperForm.querySelectorAll('.main-form__input');
+        inputs[0].placeholder = 'Имя'
+        inputs[1].placeholder = 'Телефон'
+
+        const blocks = mainSwiperForm.querySelectorAll('.main-form__block');
+        blocks[2].style.display = 'none';
+
+        const button = mainSwiperForm.querySelector('button');
+        button.classList.add('main-form__button');
+        button.textContent = 'Получить бесплатный урок';
+
+    }, 200)
+
     // ВИДЕО "КАК СТАТЬ ЗВЕЗДОЙ"
     const video = document.querySelector('.video');
 
