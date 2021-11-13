@@ -603,6 +603,8 @@ img {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #FFFFFF;
+  -webkit-transition: color .3s;
+  transition: color .3s;
 }
 
 .header-bottom {
@@ -2000,6 +2002,102 @@ img {
   background: rgba(255, 255, 255, 0.9);
 }
 
+.map {
+  padding-bottom: 50px;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  border-radius: 20px;
+}
+
+.map-wrapper__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.map-wrapper__block {
+  position: absolute;
+  z-index: 5;
+  top: 15%;
+  left: 5%;
+  width: 500px;
+  height: 475px;
+  background-color: #fff;
+  padding: 0 50px 20px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #000000;
+}
+
+.map-wrapper__logo {
+  width: 295px;
+  height: 90px;
+  margin-top: -25px;
+  margin-bottom: 15px;
+}
+
+.map-wrapper__name {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  margin-bottom: 45px;
+}
+
+.map-wrapper__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+.map-wrapper__item--ai {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.map-wrapper__icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 20px;
+}
+
+.map-wrapper__address {
+  font-size: 16px;
+  line-height: 170%;
+}
+
+.map-wrapper__number {
+  font-size: 22px;
+  line-height: 21px;
+}
+
+.map-wrapper__email {
+  font-size: 22px;
+  line-height: 21px;
+}
+
+.map-wrapper__time {
+  font-size: 16px;
+  line-height: 15px;
+}
+
 @media (min-width: 1200px) {
   a:hover, button:hover {
     cursor: pointer;
@@ -2009,6 +2107,9 @@ img {
   }
   .header-block__whatsapp:hover {
     background-color: rgba(255, 255, 255, 0.1);
+  }
+  .header-menu__link:hover {
+    color: #FEDA2F;
   }
   .main-center__btn:hover {
     background-color: #FEDA2F;
