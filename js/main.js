@@ -169,6 +169,39 @@ jQuery(document).ready(function(){
     for (let i = 14; i < images.length; i++)
         images[i].style.display = 'none';
 
+    // ЗАПИСЬ
+    setTimeout(()=>{
+        const register = document.querySelector('.register');
+
+        const registerForm = register.querySelector('form');
+        
+        registerForm.querySelectorAll('.alfacrm-control').forEach(item => {
+            item.classList.add('register-form__block');
+            item.children[0].classList.add('register-form__input');
+        });
+
+        const inputs = registerForm.querySelectorAll('.register-form__input');
+        inputs[0].placeholder = 'Имя'
+        inputs[1].placeholder = 'Телефон'
+
+        const blocks = registerForm.querySelectorAll('.register-form__block');
+        blocks[2].style.display = 'none';
+
+        const button = registerForm.querySelector('button');
+        button.classList.add('register-form__button');
+        button.textContent = 'Записаться на занятие';
+
+        const div = document.createElement('div');
+        div.innerHTML = `
+            <label class="label">
+                <input type="checkbox" class="checkbox" required> 
+                <span class="fake register-fake"></span>
+                <span class="register-text">Я соглашаюсь с <a href="#" style="text-decoration: underline; color: #000;">условиями хранения персональных данных</a></span>
+                
+            </label>
+        `;
+        blocks[1].appendChild(div);
+    }, 200)
     
 
 });

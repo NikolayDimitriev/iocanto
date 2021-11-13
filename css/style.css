@@ -670,6 +670,11 @@ img {
   margin-bottom: 52px;
 }
 
+.header-form__input {
+  color: #FFFFFF !important;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5) !important;
+}
+
 .header-container {
   position: absolute;
   top: 0;
@@ -727,10 +732,8 @@ img {
   width: 100%;
   font-size: 20px;
   line-height: 120%;
-  color: #FFFFFF;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .alfacrm-control:last-child {
@@ -769,9 +772,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1955,6 +1955,30 @@ img {
   color: #000000;
   margin-top: 0;
   margin-bottom: 52px;
+}
+
+.register-form__block {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.register-form__block:first-child {
+  margin-bottom: 52px;
+}
+
+.register-form__input {
+  color: #000 !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+.register-text {
+  color: #000;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.register-fake {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 @media (min-width: 1200px) {
