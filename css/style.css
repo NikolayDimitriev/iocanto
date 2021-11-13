@@ -1921,6 +1921,42 @@ img {
   border: 5px solid #FEDA2F;
 }
 
+.register {
+  padding-bottom: 120px;
+}
+
+.register-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.register-wrapper__image {
+  margin-right: 130px;
+}
+
+.register-wrapper__form {
+  width: 531px;
+}
+
+.register-wrapper__title {
+  font-family: "GothamPro-Black", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 110%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 52px;
+}
+
 @media (min-width: 1200px) {
   a:hover, button:hover {
     cursor: pointer;
