@@ -1859,6 +1859,68 @@ img {
      object-fit: cover;
 }
 
+.photos {
+  padding-bottom: 115px;
+}
+
+.photos-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.photos__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: "GothamPro-Light", sans-serif;
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.photos-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.photos-block__image {
+  width: 241px;
+  height: 241px;
+  margin-bottom: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.photos__btn {
+  border: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  border: 5px solid #FEDA2F;
+}
+
 @media (min-width: 1200px) {
   a:hover, button:hover {
     cursor: pointer;

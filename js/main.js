@@ -156,4 +156,19 @@ jQuery(document).ready(function(){
         });
     });
 
+    // ФОТОГАЛЕРЕЯ
+    const images = document.querySelectorAll('.photos-block__image');
+    const imagesBtn = document.querySelector('.photos__btn');
+
+    imagesBtn.addEventListener('click', () => {
+        for (let i = 14; i < images.length; i++)
+            images[i].style.display = 'block';
+        imagesBtn.style.display = 'none';
+    });
+
+    for (let i = 14; i < images.length; i++)
+        images[i].style.display = 'none';
+
+    
+
 });
