@@ -232,6 +232,14 @@ jQuery(document).ready(function(){
         });
     });
 
+    const swiperResult = new Swiper('.result-swiper', {
+        loop: false,
+        direction: 'horizontal',
+        slidesPerView: 3,
+        spaceBetween: 80,
+      
+    });
+
     // ФОТОГАЛЕРЕЯ
     const images = document.querySelectorAll('.photos-block__image');
     const imagesBtn = document.querySelector('.photos__btn');
@@ -285,33 +293,37 @@ jQuery(document).ready(function(){
         const modal = document.querySelectorAll('.modal').forEach(item => {
 
             const modalForm = item.querySelector('form');
+
+            if (modalForm) {
+
+                modalForm.querySelectorAll('.alfacrm-control').forEach(elem => {
+                    elem.classList.add('modal-form__block');
+                    elem.children[0].classList.add('modal-form__input');
+                });
+        
+                const inputs = modalForm.querySelectorAll('.modal-form__input');
+                inputs[0].placeholder = 'Имя'
+                inputs[1].placeholder = 'Телефон'
+        
+                const blocks = modalForm.querySelectorAll('.modal-form__block');
+                blocks[2].style.display = 'none';
+        
+                const button = modalForm.querySelector('button');
+                button.classList.add('modal-form__button');
+                button.textContent = 'Оставить заявку';
+        
+                const div = document.createElement('div');
+                div.innerHTML = `
+                    <label class="label">
+                        <input type="checkbox" class="checkbox" required checked> 
+                        <span class="fake modal-fake"></span>
+                        <span class="modal-text">Я соглашаюсь с <a href="#" style="text-decoration: underline; color: #000;">условиями хранения персональных данных</a></span>
+                        
+                    </label>
+                `;
+                blocks[1].appendChild(div);
+            }
             
-            modalForm.querySelectorAll('.alfacrm-control').forEach(elem => {
-                elem.classList.add('modal-form__block');
-                elem.children[0].classList.add('modal-form__input');
-            });
-    
-            const inputs = modalForm.querySelectorAll('.modal-form__input');
-            inputs[0].placeholder = 'Имя'
-            inputs[1].placeholder = 'Телефон'
-    
-            const blocks = modalForm.querySelectorAll('.modal-form__block');
-            blocks[2].style.display = 'none';
-    
-            const button = modalForm.querySelector('button');
-            button.classList.add('modal-form__button');
-            button.textContent = 'Оставить заявку';
-    
-            const div = document.createElement('div');
-            div.innerHTML = `
-                <label class="label">
-                    <input type="checkbox" class="checkbox" required checked> 
-                    <span class="fake modal-fake"></span>
-                    <span class="modal-text">Я соглашаюсь с <a href="#" style="text-decoration: underline; color: #000;">условиями хранения персональных данных</a></span>
-                    
-                </label>
-            `;
-            blocks[1].appendChild(div);
         });
 
     }, 200)
