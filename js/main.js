@@ -174,6 +174,22 @@ jQuery(document).ready(function(){
         navigation: {
           nextEl: '.team-block__btn.team-block__btn--next',
           prevEl: '.team-block__btn.team-block__btn--prev',
+        },
+
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10
+            },
+            687: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            1220: {
+                slidesPerView: 3,
+                spaceBetween: 40
+            }
         }
       
     });
