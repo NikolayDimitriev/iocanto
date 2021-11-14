@@ -2240,6 +2240,84 @@ img {
   margin-bottom: 30px;
 }
 
+.modal {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.modal__dialog {
+  position: fixed;
+  max-width: 671px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 70px;
+  background-color: #fff;
+  color: #000;
+  z-index: 101;
+  max-height: calc(100% - 30px);
+  overflow-y: auto;
+}
+
+.modal__close {
+  position: absolute;
+  right: 11%;
+  top: 13%;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.modal__title {
+  font-family: "GothamPro-Black", sans-serif;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 110%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 74px;
+}
+
+.modal-form__block {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.modal-form__block:first-child {
+  margin-bottom: 52px;
+}
+
+.modal-form__input {
+  color: #000 !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+.modal-text {
+  color: #000;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.modal-fake {
+  background: rgba(255, 255, 255, 0.9);
+}
+
 @media (min-width: 1200px) {
   a:hover, button:hover {
     cursor: pointer;
@@ -2268,10 +2346,10 @@ img {
   .direction-block__card:hover .direction-block__title {
     color: #FEDA2F;
   }
-  .cost-cards__up:hover {
+  .cost-cards__card:hover {
     cursor: pointer;
   }
-  .cost-cards__up:hover .cost-cards__title {
+  .cost-cards__card:hover .cost-cards__title {
     color: #FEDA2F;
   }
   .footer-navbar__link:hover {

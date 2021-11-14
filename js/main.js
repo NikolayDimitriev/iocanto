@@ -5,8 +5,8 @@ jQuery(document).ready(function(){
     })
     
     // HEADER
+    const header = document.querySelector('.header');
     setTimeout(()=>{
-        const header = document.querySelector('.header');
 
         const headerForm = header.querySelector('form');
         
@@ -29,7 +29,7 @@ jQuery(document).ready(function(){
         const div = document.createElement('div');
         div.innerHTML = `
             <label class="label">
-                <input type="checkbox" class="checkbox" required> 
+                <input type="checkbox" class="checkbox" required checked> 
                 <span class="fake"></span>
                 <span class="text">Я соглашаюсь с <a href="#" style="text-decoration: underline;">условиями хранения персональных данных</a></span>
                 
@@ -38,11 +38,28 @@ jQuery(document).ready(function(){
         blocks[1].appendChild(div);
     }, 200)
 
-    document.querySelector('.header-arrow').addEventListener('click', () => {
+    header.querySelectorAll('.header-block__button').forEach(item => {
+        item.addEventListener('click', openModal);
+    });
+
+    header.querySelector('.header-arrow').addEventListener('click', () => {
         document.querySelector('#main').scrollIntoView({
             behavior: "smooth",
             block: "start"
         }); //прокручиваем скрол к объекту
+    });
+
+    
+        
+    header.querySelectorAll(".header-menu__link").forEach(item => { //плавное перемешение к якорю
+        item.addEventListener('click', e => {
+            e.preventDefault(); //сбросили стандартную анимацию
+            const blockId = item.getAttribute('href'); //получаем ссылку на какой блок ссылкает
+            document.querySelector('' + blockId).scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            }); //прокручиваем скрол к объекту
+        });
     });
 
     // SLIDER
@@ -128,6 +145,26 @@ jQuery(document).ready(function(){
         wrapper.appendChild(movie);
     });
 
+    // Направления
+    const modal = document.querySelector('.modal-usually');
+
+    document.querySelectorAll('.direction-block__card').forEach(item => {
+        item.addEventListener('click', openModal);
+    });
+
+    function openModal() {
+        modal.classList.add('modal--visible');
+    }
+
+    modal.addEventListener('click', event => {
+        const target = event.target;
+        event.preventDefault();
+
+        if (target.classList.contains('modal__overlay') || target.classList.contains('modal__close') || target.classList.contains('modal__close__image')) {
+            modal.classList.remove('modal--visible');
+        }
+    });
+
     // КОМАНДА
     const swiperTeam = new Swiper('.team-swiper', {
         loop: true,
@@ -155,6 +192,21 @@ jQuery(document).ready(function(){
             item.querySelector('.cost-sale__subtitle').style.display = 'none';
         });
     });
+
+    const modalFree = document.querySelector('.modal-free');
+
+    document.querySelector('.cost-cards__btn').addEventListener('click', () => {
+        modalFree.classList.add('modal--visible');
+    })
+
+    modalFree.addEventListener('click', event => {
+        const target = event.target;
+        event.preventDefault();
+
+        if (target.classList.contains('modal__overlay') || target.classList.contains('modal__close') || target.classList.contains('modal__close__image')) {
+            modalFree.classList.remove('modal--visible');
+        }
+    })
 
     // РЕЗУЛЬТАТ
     const btnPlay = document.querySelectorAll('.result-block__image');
@@ -218,14 +270,49 @@ jQuery(document).ready(function(){
         const div = document.createElement('div');
         div.innerHTML = `
             <label class="label">
-                <input type="checkbox" class="checkbox" required> 
+                <input type="checkbox" class="checkbox" required checked> 
                 <span class="fake register-fake"></span>
                 <span class="register-text">Я соглашаюсь с <a href="#" style="text-decoration: underline; color: #000;">условиями хранения персональных данных</a></span>
                 
             </label>
         `;
         blocks[1].appendChild(div);
-    }, 200)
+    }, 150)
     
 
+    // MODAL
+    setTimeout(()=>{
+        const modal = document.querySelectorAll('.modal').forEach(item => {
+
+            const modalForm = item.querySelector('form');
+            
+            modalForm.querySelectorAll('.alfacrm-control').forEach(elem => {
+                elem.classList.add('modal-form__block');
+                elem.children[0].classList.add('modal-form__input');
+            });
+    
+            const inputs = modalForm.querySelectorAll('.modal-form__input');
+            inputs[0].placeholder = 'Имя'
+            inputs[1].placeholder = 'Телефон'
+    
+            const blocks = modalForm.querySelectorAll('.modal-form__block');
+            blocks[2].style.display = 'none';
+    
+            const button = modalForm.querySelector('button');
+            button.classList.add('modal-form__button');
+            button.textContent = 'Оставить заявку';
+    
+            const div = document.createElement('div');
+            div.innerHTML = `
+                <label class="label">
+                    <input type="checkbox" class="checkbox" required checked> 
+                    <span class="fake modal-fake"></span>
+                    <span class="modal-text">Я соглашаюсь с <a href="#" style="text-decoration: underline; color: #000;">условиями хранения персональных данных</a></span>
+                    
+                </label>
+            `;
+            blocks[1].appendChild(div);
+        });
+
+    }, 200)
 });
