@@ -179,7 +179,8 @@ jQuery(document).ready(function(){
     });
 
     // СТОИМОСТЬ
-    const saleCard = document.querySelectorAll('.cost-sale__card');
+    const cost = document.querySelector('.cost');
+    const saleCard = cost.querySelectorAll('.cost-sale__card');
 
     saleCard.forEach(item => {
         item.addEventListener('mouseenter', () => {
@@ -195,7 +196,7 @@ jQuery(document).ready(function(){
 
     const modalFree = document.querySelector('.modal-free');
 
-    document.querySelector('.cost-cards__btn').addEventListener('click', () => {
+    cost.querySelector('.cost-cards__btn').addEventListener('click', () => {
         modalFree.classList.add('modal--visible');
     })
 
@@ -207,6 +208,10 @@ jQuery(document).ready(function(){
             modalFree.classList.remove('modal--visible');
         }
     })
+
+    cost.querySelectorAll('.cost-cards__block').forEach(item => {
+        item.addEventListener('click', openModal);
+    });
 
     // РЕЗУЛЬТАТ
     const btnPlay = document.querySelectorAll('.result-block__image');

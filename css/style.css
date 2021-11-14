@@ -2393,5 +2393,8 @@ img {
   .footer-navbar__link:hover {
     color: #FEDA2F;
   }
+  .footer-wrapper__elem:hover .footer-wrapper__name {
+    color: #feda2f;
+  }
 }
 /*# sourceMappingURL=style.css.map */
