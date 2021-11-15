@@ -65,6 +65,7 @@ jQuery(document).ready(function(){
     const headerContainer = $('.header__container')[0];
     const headerTop = $('.header-top')[0];
     const headerMovie = header.querySelector('.header__movie');
+    const main = document.querySelector('.main');
 
     $('.header-burger').on('click', function(e) {
         e.preventDefault;
@@ -74,11 +75,13 @@ jQuery(document).ready(function(){
             headerContainer.style.width = '93%'
             headerTop.style.display = 'flex'
             headerMovie.style.top = '0'
+            main.style.marginTop = '0';
         }
         else {
             headerMobile.classList.add('header-mobile__active')
             headerContainer.style.width = '100%'
             headerTop.style.display = 'none'
+            main.style.marginTop = `${headerMobile.clientHeight}px`
             headerMovie.style.top = `${headerMobile.clientHeight}px`
         }
 
@@ -280,6 +283,22 @@ jQuery(document).ready(function(){
         direction: 'horizontal',
         slidesPerView: 3,
         spaceBetween: 80,
+
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 1.1,
+              spaceBetween: 10
+            },
+            787: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            1220: {
+                slidesPerView: 3,
+                spaceBetween: 80
+            }
+        }
       
     });
 

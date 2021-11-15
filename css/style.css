@@ -3101,6 +3101,17 @@ img {
     line-height: 120%;
     margin-bottom: 30px;
   }
+  .team-swiper {
+    width: 90%;
+    margin-left: 0;
+  }
+  .team-block__btn {
+    display: none;
+  }
+  .team-block__image {
+    width: 95%;
+    height: 300px;
+  }
   .team-wrapper {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -3230,6 +3241,41 @@ img {
   .cost-sale__title {
     font-size: 18px;
     line-height: 130%;
+  }
+  .result {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .result-wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .result-title {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .result-title__extra {
+    font-size: 20px;
+    line-height: 120%;
+  }
+  .result-title__main {
+    font-size: 38px;
+    line-height: 120%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .result-swiper {
+    height: 180px;
+  }
+  .result-block__bg {
+    height: 100%;
+    width: 100%;
+  }
+  .result-block__image {
+    width: 60px;
+    height: 60px;
   }
 }
 /*# sourceMappingURL=style.css.map */
