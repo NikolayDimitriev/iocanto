@@ -49,8 +49,7 @@ jQuery(document).ready(function(){
         }); //прокручиваем скрол к объекту
     });
 
-    
-        
+           
     header.querySelectorAll(".header-menu__link").forEach(item => { //плавное перемешение к якорю
         item.addEventListener('click', e => {
             e.preventDefault(); //сбросили стандартную анимацию
@@ -60,6 +59,29 @@ jQuery(document).ready(function(){
                 block: "start"
             }); //прокручиваем скрол к объекту
         });
+    });
+
+    const headerMobile = $('.header-mobile')[0];
+    const headerContainer = $('.header__container')[0];
+    const headerTop = $('.header-top')[0];
+    const headerMovie = header.querySelector('.header__movie');
+
+    $('.header-burger').on('click', function(e) {
+        e.preventDefault;
+
+        if (headerMobile.classList.contains('header-mobile__active')) {
+            headerMobile.classList.remove('header-mobile__active')
+            headerContainer.style.width = '93%'
+            headerTop.style.display = 'flex'
+            headerMovie.style.top = '0'
+        }
+        else {
+            headerMobile.classList.add('header-mobile__active')
+            headerContainer.style.width = '100%'
+            headerTop.style.display = 'none'
+            headerMovie.style.top = `${headerMobile.clientHeight}px`
+        }
+
     });
 
     // SLIDER

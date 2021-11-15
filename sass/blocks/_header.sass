@@ -5,6 +5,21 @@
     justify-content: center
     height: 100vh
     color: #fff
+    &-mobile
+        display: none
+        flex-direction: column
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), linear-gradient(73.16deg, #544C77 -0.11%, #314B70 29.61%, #314B70 74.97%, #544C77 100%)
+        &__up
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &__down
+            margin-top: 40px
+            display: flex
+            flex-direction: column
+        &__active
+            display: flex
+            padding: 0 15px
     &-top
         display: flex
         align-items: center
@@ -112,10 +127,11 @@
         &__title
             margin: 0
             margin-bottom: 20px
-            font-family: "GothamPro-Bold", sans-serif
-            font-size: 80px;
-            line-height: 130%;
-            letter-spacing: 0.05em;
+            font-family: "GothamPro-Black", sans-serif
+            font-weight: 900
+            font-size: 80px
+            line-height: 130%
+            letter-spacing: 0.05em
             text-transform: uppercase
         &__subtitle
             margin: 0
@@ -125,6 +141,20 @@
             text-transform: uppercase
             & span
                 border-bottom: 2px solid #feda2f
+        &__btn
+            display: none
+            border: none
+            width: 100%
+            border-radius: 5px
+            background-color: #feda2f
+            font-family: "GothamPro-Bold", sans-serif
+            font-weight: bold
+            font-size: 15px
+            line-height: 14px
+            letter-spacing: 0.1em
+            text-transform: uppercase
+            color: #000
+            padding: 21px 20px
     &-form
         width: 525px
         &__title
@@ -185,4 +215,6 @@
         bottom: 5%
         left: 5%
         cursor: pointer
+
+
 

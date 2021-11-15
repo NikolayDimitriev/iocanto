@@ -209,4 +209,72 @@
                     width: 550px
             &__contacts
                 padding-left: 15px
-
+@media ( max-width: 767px )
+    .container
+        max-width: 576px
+        width: 93%
+    .header
+        &__logo
+            width: 116px
+            height: 90px
+        &-menu
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            &__item
+                margin-bottom: 35px
+            &__link
+                font-size: 22px
+                line-height: 21px
+        &-block
+            &__text
+                max-width: 290px
+                font-size: 14px
+                line-height: 140%
+                color: #CFCFCF
+                display: inline-block
+                margin-top: -5px
+                margin-bottom: 30px
+            &__phones
+                display: flex
+                flex-direction: column
+                margin-bottom: 40px
+            &__link
+                font-size: 18px
+                line-height: 17px
+                color: #CFCFCF
+                &:last-child 
+                    margin-top: 20px
+                    margin-left: 0
+            &__button
+                background: #FEDA2F
+                font-weight: bold
+                font-size: 18px
+                line-height: 17px
+                letter-spacing: 0.05em
+                color: #000000
+                width: 100%
+                margin-bottom: 30px
+        &-top
+            display: flex
+            justify-content: space-between
+        &-block
+            display: none
+        &-burger
+            display: block
+        &-bottom
+            padding-top: 60px
+            justify-content: center
+            &__form
+                display: none
+            &__title
+                font-size: 32px
+                line-height: 130%
+            &__subtitle
+                font-size: 20px
+                line-height: 140%
+                margin-bottom: 50px
+            &__btn
+                display: block
+        &-arrow
+            display: none

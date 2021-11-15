@@ -1,0 +1,43 @@
+.header-burger {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    padding: 0;
+}
+  .header-burger span,
+  .header-burger span::before,
+  .header-burger span::after {
+    position: absolute;
+    top: 50%; margin-top: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+  }
+  .header-burger span::before,
+  .header-burger span::after {
+    content: '';
+    display: block;
+    transition: 0.2s;
+  }
+  .header-burger span::before {
+    transform: translateY(-13px);
+  }
+  .header-burger span::after {
+    transform: translateY(13px);
+  }
+  
+  .header-burger__active span:before {
+    transform: rotate(45deg);
+  
+  }
+  .header-burger__active span:after {
+    transform: rotate(-45deg);
+  
+  }
+  .header-burger__active span {
+    height: 0;
+  }

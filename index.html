@@ -19,7 +19,50 @@
         </div>
         <!-- /.header__movie -->
         <div class="header-container">
-            <div class="container">
+            <div class="container header__container">
+
+                <div class="header-mobile">
+                    <div class="header-mobile__up">
+                        <img src="img/header/logo.svg" alt="Логотип" class="logo header__logo">
+                        <button class="header-burger header-burger__active">
+                            <span class="header-burger__btn"></span>
+                        </button>
+                    </div>
+                    <!-- /.header-mobile__up -->
+                    <div class="header-mobile__down">
+                        <ul class="header-menu">
+                            <li class="header-menu__item">
+                                <a href="#main" class="header-menu__link">Главное</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#about" class="header-menu__link">О школе</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#direction" class="header-menu__link">Направления</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#team" class="header-menu__link">Преподаватели</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#cost" class="header-menu__link">Стоимость</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#result" class="header-menu__link">результаты</a>
+                            </li>
+                        </ul>
+                        <span class="header-block__text">
+                            м. Октябрьское поле, ул. Маршала Вершинина 8, к 2,
+                            2-й этаж
+                        </span>
+                        <div class="header-block__phones">
+                            <a href="tel:8 (499) 714-88-58" class="header-block__link">8 (499) 714-88-58</a>
+                            <a href="tel:8 (977) 383-48-88" class="header-block__link">8 (977) 383-48-88</a>
+                        </div>
+                        <button class="header-block__button">Оставить заявку</button>
+                    </div>
+                    <!-- /.header-mobile__down -->
+                </div>
+                <!-- /.header-mobile -->
 
                 <div class="header-top">
                     <img src="img/header/logo.svg" alt="Логотип" class="logo header__logo">
@@ -79,6 +122,9 @@
                         <!-- /.header-block__bottom -->
                     </div>
                     <!-- /.header-block -->
+                    <button class="header-burger">
+                        <span class="header-burger__btn"></span>
+                    </button>
                 </div>
                 <!-- /.header-top -->
                 <div class="header-bottom">
@@ -86,6 +132,7 @@
                         <h1 class="header-bottom__title">Музыкальная <br> студия <img src="img/header/studio.svg"
                                 alt="Иконка названия студии iocanto" class="header-bottom__icon"></h1>
                         <h2 class="header-bottom__subtitle">Научись <br> петь и играть с <span>нуля</span></h2>
+                        <button class="header-bottom__btn">Записаться на занятие</button>
                     </div>
                     <!-- /.header-bottom__info -->
                     <div class="header-bottom__form header-form">
@@ -103,7 +150,7 @@
 
     </header>
 
-    <section class="main" id="main">
+    <section class="main" id="main" style="display: none;">
         <div class="main-up" id="main">
             <div class="container">
                 <div class="main-swiper swiper">
@@ -337,7 +384,7 @@
         <!-- /.main-down -->
     </section>
     
-    <section class="video">
+    <section class="video" style="display: none;">
         <div class="container">
             <div class="video-wrapper">
                 <div class="video-wrapper__block">
@@ -355,7 +402,7 @@
         </div>
     </section>
 
-    <section class="direction" id="direction">
+    <section class="direction" id="direction" style="display: none;">
         <div class="container">
             <div class="direction-wrapper">
 
@@ -462,7 +509,7 @@
         </div>
     </section>
 
-    <section class="team" id="team">
+    <section class="team" id="team" style="display: none;">
         <div class="container">
             <div class="team-wrapper">
                 <div class="team-title">
@@ -536,7 +583,7 @@
         <!-- /.container -->
     </section>
 
-    <section class="cost" id="cost">
+    <section class="cost" id="cost" style="display: none;">
         <div class="container">
             <div class="cost-wrapper">
                 <div class="cost-title">
@@ -695,7 +742,7 @@
         <!-- /.container -->
     </section>
 
-    <section class="result" id="result">
+    <section class="result" id="result" style="display: none;">
         <div class="container">
             <div class="result-wrapper">
                 <div class="result-title">
@@ -739,7 +786,7 @@
         <!-- /.container -->
     </section>
 
-    <section class="photos">
+    <section class="photos" style="display: none;">
         <div class="container">
             <div class="photos-wrapper">
                 <h2 class="photos__title">Фотогалерея</h2>
@@ -819,7 +866,7 @@
         <!-- /.container -->
     </section>
 
-    <section class="register">
+    <section class="register" style="display: none;">
         <div class="container">
             <div class="register-wrapper">
                 <img src="img/register/register-image.svg" alt="Логотип" class="register-wrapper__image">
@@ -835,7 +882,7 @@
         <!-- /.container -->
     </section>
 
-    <section class="map">
+    <section class="map" style="display: none;">
         <div class="container">
             <div class="map-wrapper">
                 <div class="map-wrapper__map">
@@ -870,7 +917,7 @@
         <!-- /.container -->
     </section>
 
-    <footer class="footer">
+    <footer class="footer" style="display: none;">
         <div class="container">
             <div class="footer-wrapper">
                 <div class="footer-wrapper__item">
