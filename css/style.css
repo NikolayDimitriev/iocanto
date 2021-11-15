@@ -3086,5 +3086,150 @@ img {
     padding-bottom: 4px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   }
+  .team {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .team-title__extra {
+    font-size: 20px;
+    line-height: 120%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000;
+  }
+  .team-title__main {
+    font-size: 38px;
+    line-height: 120%;
+    margin-bottom: 30px;
+  }
+  .team-wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .cost {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .cost-title {
+    max-width: 290px;
+  }
+  .cost-title__extra {
+    font-size: 20px;
+    line-height: 120%;
+  }
+  .cost-title__main {
+    font-size: 30px;
+    line-height: 120%;
+    margin-bottom: 30px;
+  }
+  .cost-wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .cost-cards {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .cost-cards__free {
+    padding: 17px 20px 40px 20px;
+    margin-right: 0;
+  }
+  .cost-cards__image {
+    width: 125px;
+    height: 93px;
+    margin-bottom: 30px;
+  }
+  .cost-cards__extra {
+    font-size: 25px;
+    line-height: 120%;
+    margin-bottom: 20px;
+  }
+  .cost-cards__main {
+    font-size: 40px;
+    line-height: 120%;
+  }
+  .cost-cards__btn {
+    padding: 0;
+  }
+  .cost-cards__line {
+    display: none;
+  }
+  .cost-cards__record {
+    padding-bottom: 4px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  }
+  .cost-cards__up {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 20px 15px;
+  }
+  .cost-cards__title {
+    font-size: 20px;
+    line-height: 140%;
+    text-align: left;
+  }
+  .cost-cards__arrow {
+    display: block;
+    margin-top: 5px;
+  }
+  .cost-cards__card:nth-child(3) {
+    margin-right: 0;
+  }
+  .cost-cards__down {
+    padding: 0 15px;
+  }
+  .cost-cards__text {
+    font-size: 13px;
+    line-height: 170%;
+  }
+  .cost-sale {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    height: auto;
+  }
+  .cost-sale__card {
+    width: 100%;
+    border-bottom: 0;
+    padding: 30px 0 0 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .cost-sale__card:last-child {
+    border-bottom: 2px solid #fff;
+  }
+  .cost-sale__subtitle {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 30px;
+  }
+  .cost-sale__price {
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 38px;
+  }
+  .cost-sale__title {
+    font-size: 18px;
+    line-height: 130%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
