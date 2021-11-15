@@ -587,4 +587,114 @@
             &__image
                 width: 60px
                 height: 60px
+    .photos
+        padding-bottom: 40px
+        &__title
+            font-size: 30px
+            line-height: 120%
+            margin-bottom: 20px
+        &-block
+            &__image
+                width: 95px
+                height: 95px
+    @for $i from 7 through 63 
+        .photos-block__image:nth-child(#{$i}) 
+            display: none
+    .register
+        padding-top: 0
+        padding-bottom: 40px
+        &-wrapper
+            &__image
+                display: none
+            &__title
+                font-size: 35px
+                line-height: 110%
+                margin-bottom: 33px
+        &-form
+            &__button
+                font-size: 15px
+                line-height: 14px
+    .map
+        padding-bottom: 0
+        &-wrapper
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: flex-start
+            &__map
+                position: relative
+                height: 400px
+                margin-bottom: 40px
+            &__block
+                position: relative
+                padding: 0
+                width: 100%
+                text-align: center
+                top: 0
+                left: 0
+                height: auto
+            &__item
+                max-width: 290px
+                margin-bottom: 30px
+                justify-content: center
+                & br
+                    display: none
+                &--ai
+                    justify-content: center
+                    & br
+                        display: block
+            &__name
+                display: none
+            &__logo
+                display: none
+            &__icon
+                display: none
+    .footer
+        padding-top: 30px
+        padding-bottom: 40px
+        &-wrapper
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            flex-wrap: nowrap
+            &__item
+                margin-bottom: 40px
+                &:nth-child(2)
+                    width: 100%
+            &__contacts
+                display: none
+            &__social
+                width: 100%
+                max-width: 100% 
+                flex-direction: row
+                justify-content: space-between
+                align-items: center
+                margin-bottom: 40px
+                margin-top: -10px
+                max-width: 290px
+            &__elem
+                flex-direction: row
+                &:first-child
+                    margin-bottom: 0
+            &__name
+                margin-bottom: 0
+                margin-right: 15px
+            &__rights
+                width: 100%
+                font-size: 14px
+                line-height: 150%
+                left: 0
+                text-align: center
+        &-navbar
+            flex-direction: column
+            align-items: center
+            &__left,
+            &__center,
+            &__right
+                align-items: center
+            &__link
+                margin-bottom: 30px
+        
+
 
