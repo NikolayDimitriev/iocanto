@@ -17,7 +17,9 @@ jQuery(document).ready(function(){
 
         const inputs = headerForm.querySelectorAll('.header-form__input');
         inputs[0].placeholder = 'Имя'
+        inputs[0].required = true;
         inputs[1].placeholder = 'Телефон'
+        inputs[1].required = true;
 
         const blocks = headerForm.querySelectorAll('.header-form__block');
         blocks[2].style.display = 'none';
@@ -73,6 +75,7 @@ jQuery(document).ready(function(){
         if (headerMobile.classList.contains('header-mobile__active')) {
             headerMobile.classList.remove('header-mobile__active')
             headerContainer.style.width = '93%'
+            headerContainer.style.maxWidth = '576px'
             headerTop.style.display = 'flex'
             headerMovie.style.top = '0'
             main.style.marginTop = '0';
@@ -80,11 +83,18 @@ jQuery(document).ready(function(){
         else {
             headerMobile.classList.add('header-mobile__active')
             headerContainer.style.width = '100%'
+            headerContainer.style.maxWidth = '100%'
             headerTop.style.display = 'none'
             main.style.marginTop = `${headerMobile.clientHeight}px`
             headerMovie.style.top = `${headerMobile.clientHeight}px`
         }
 
+    });
+
+    header.querySelector('.header-bottom__btn').addEventListener('click', event => {
+        event.preventDefault();
+
+        openModal();
     });
 
     // SLIDER
@@ -130,8 +140,10 @@ jQuery(document).ready(function(){
         });
 
         const inputs = mainSwiperForm.querySelectorAll('.main-form__input');
-        inputs[0].placeholder = 'Имя'
-        inputs[1].placeholder = 'Телефон'
+        inputs[0].placeholder = 'Имя';
+        inputs[0].required = true;
+        inputs[1].placeholder = 'Телефон';
+        inputs[1].required = true;
 
         const blocks = mainSwiperForm.querySelectorAll('.main-form__block');
         blocks[2].style.display = 'none';
@@ -212,8 +224,8 @@ jQuery(document).ready(function(){
               spaceBetween: 20
             },
             1220: {
-                slidesPerView: 3,
-                spaceBetween: 40
+                slidesPerView: 4,
+                spaceBetween: 80
             }
         }
       
@@ -252,6 +264,29 @@ jQuery(document).ready(function(){
 
     cost.querySelectorAll('.cost-cards__block').forEach(item => {
         item.addEventListener('click', openModal);
+    });
+
+    cost.querySelectorAll('.cost-cards__arrow').forEach(item => {
+        const src = item.getAttribute('src');
+        const srcH = item.getAttribute('data-image-src');
+        const parent = item.previousElementSibling;
+        const tab = item.parentNode.nextElementSibling;
+
+        item.addEventListener('click', () => {
+            const index = item.src.indexOf("img/");
+
+            if (item.src.substring(index) == src) 
+            {
+                item.src = srcH;
+                parent.style.color = '#FEDA2F';
+                tab.style.display = 'block';
+            }
+            else {
+                item.src = src;
+                parent.style.color = '#fff';
+                tab.style.display = 'none';
+            }
+        });
     });
 
     // РЕЗУЛЬТАТ
@@ -325,7 +360,9 @@ jQuery(document).ready(function(){
 
         const inputs = registerForm.querySelectorAll('.register-form__input');
         inputs[0].placeholder = 'Имя'
+        inputs[0].required = true;
         inputs[1].placeholder = 'Телефон'
+        inputs[1].required = true;
 
         const blocks = registerForm.querySelectorAll('.register-form__block');
         blocks[2].style.display = 'none';
@@ -363,6 +400,8 @@ jQuery(document).ready(function(){
                 const inputs = modalForm.querySelectorAll('.modal-form__input');
                 inputs[0].placeholder = 'Имя'
                 inputs[1].placeholder = 'Телефон'
+                inputs[0].required = true;
+                inputs[1].required = true;
         
                 const blocks = modalForm.querySelectorAll('.modal-form__block');
                 blocks[2].style.display = 'none';
