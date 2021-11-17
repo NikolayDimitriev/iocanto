@@ -38,7 +38,7 @@ jQuery(document).ready(function(){
             </label>
         `;
         blocks[1].appendChild(div);
-    }, 200)
+    }, 500)
 
     header.querySelectorAll('.header-block__button').forEach(item => {
         item.addEventListener('click', openModal);
@@ -152,7 +152,7 @@ jQuery(document).ready(function(){
         button.classList.add('main-form__button');
         button.textContent = 'Получить бесплатный урок';
 
-    }, 200)
+    }, 500)
 
     // ВИДЕО "КАК СТАТЬ ЗВЕЗДОЙ"
     const video = document.querySelector('.video');
@@ -381,7 +381,7 @@ jQuery(document).ready(function(){
             </label>
         `;
         blocks[1].appendChild(div);
-    }, 150)
+    }, 500)
     
 
     // MODAL
@@ -424,5 +424,5 @@ jQuery(document).ready(function(){
             
         });
 
-    }, 200)
+    }, 500)
 });
