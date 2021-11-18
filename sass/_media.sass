@@ -34,6 +34,11 @@
                     cursor: pointer
                     .direction-block__title
                         color: #FEDA2F
+    .team
+        &-block
+            &__name
+                &:hover
+                    color: #FEDA2F
     .cost
         &-cards
             &__card
@@ -211,6 +216,12 @@
                     width: 550px
             &__contacts
                 padding-left: 15px
+@media ( max-width:  1200px)
+    .container
+        max-width: 1140px
+    .teacher
+        &-container
+            max-width: 1140px
 @media ( max-width: 767px )
     .container
         max-width: 576px
@@ -473,6 +484,8 @@
             width: 90%
             margin-left: 0
         &-block
+            &__name
+                color: #FEDA2F
             &__btn
                 display: none
             &__image
@@ -787,3 +800,18 @@
                 max-width: 252px
         &-swiper
             display: block
+    .teacher
+        padding-top: 30px
+        padding-bottom: 30px
+        &-container
+            max-width: 576px
+            width: 93%
+            flex-direction: column
+            justify-content: space-between
+        &__image
+            width: 100%
+            margin-right: 0
+            margin-bottom: 20px
+        &-info
+            font-size: 16px
+            line-height: 150%

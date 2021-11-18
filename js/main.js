@@ -386,7 +386,7 @@ jQuery(document).ready(function(){
 
     // MODAL
     setTimeout(()=>{
-        const modal = document.querySelectorAll('.modal').forEach(item => {
+        document.querySelectorAll('.modal').forEach(item => {
 
             const modalForm = item.querySelector('form');
 

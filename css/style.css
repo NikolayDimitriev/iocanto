@@ -2761,6 +2761,15 @@ img {
   color: #000000;
 }
 
+.breadcrumb__subtitle {
+  text-align: center;
+  font-family: "GothamPro-Light", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 160%;
+  color: #000;
+}
+
 .article {
   padding-top: 50px;
   padding-bottom: 70px;
@@ -2921,6 +2930,35 @@ img {
   height: 287px;
 }
 
+.teacher {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.teacher-container {
+  max-width: 1140px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.teacher__image {
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 50px;
+}
+
+.teacher-info {
+  font-size: 18px;
+  line-height: 160%;
+  color: #000;
+}
+
 @media (min-width: 1200px) {
   a:hover, button:hover {
     cursor: pointer;
@@ -2947,6 +2985,9 @@ img {
     cursor: pointer;
   }
   .direction-block__card:hover .direction-block__title {
+    color: #FEDA2F;
+  }
+  .team-block__name:hover {
     color: #FEDA2F;
   }
   .cost-cards__card:hover {
@@ -3167,6 +3208,15 @@ img {
   }
   .footer-wrapper__contacts {
     padding-left: 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  .teacher-container {
+    max-width: 1140px;
   }
 }
 
@@ -3560,6 +3610,9 @@ img {
   .team-swiper {
     width: 90%;
     margin-left: 0;
+  }
+  .team-block__name {
+    color: #FEDA2F;
   }
   .team-block__btn {
     display: none;
@@ -4209,6 +4262,30 @@ img {
   }
   .article-swiper {
     display: block;
+  }
+  .teacher {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .teacher-container {
+    max-width: 576px;
+    width: 93%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .teacher__image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .teacher-info {
+    font-size: 16px;
+    line-height: 150%;
   }
 }
 /*# sourceMappingURL=style.css.map */
