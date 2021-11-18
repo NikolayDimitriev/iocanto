@@ -17,6 +17,13 @@
     height: 2px;
     background-color: #fff;
   }
+
+  .news-burger span,
+  .news-burger span::before,
+  .news-burger span::after {
+    background-color: #000 !important; 
+  }
+
   .header-burger span::before,
   .header-burger span::after {
     content: '';
