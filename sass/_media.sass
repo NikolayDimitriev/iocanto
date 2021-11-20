@@ -222,11 +222,17 @@
     .teacher
         &-container
             max-width: 1140px
+    .main
+        &-left
+            &__title
+                &--dn   
+                    display: block
 @media ( max-width: 767px )
     .container
         max-width: 576px
         width: 93%
     .header
+        height: 480px
         &__logo
             width: 116px
             height: 90px
@@ -303,13 +309,17 @@
                 flex-direction: column
                 align-items: center
         &-left
+            padding-top: 35px
             align-items: center
             width: 100%
-            border-radius: 0
+            border-radius: 10px 10px 0 0
+            max-width: 100%
             &__title
                 font-size: 30px
                 line-height: 120%
                 margin-bottom: 10px
+                &--dn
+                    display: none
             &__subtitle
                 text-align: center
             &__image
@@ -319,6 +329,7 @@
             flex-direction: column
             padding: 20px 10px
             width: 100%
+            border-radius: 0 0 10px 10px
             &__block
                 display: flex
                 flex-direction: row
@@ -361,17 +372,19 @@
         &-slider
             height: 100%    
         &-button
-            left: 2px
-            bottom: 95%
+            left: -5%
+            bottom: 96%
             background-color: transparent
             &__arrow
                 display: none
             &__left
                 color: #fff
+                font-size: 15px
+                line-height: 14px
         &-form
             width: 100%
         &-down
-            padding-top: 0
+            padding-top: 30px
             padding-bottom: 0
             &__logo
                 width: 230px
@@ -481,16 +494,19 @@
                 line-height: 120%
                 margin-bottom: 30px
         &-swiper
-            width: 90%
+            width: 100%
             margin-left: 0
+            margin-right: 0
         &-block
             &__name
                 color: #FEDA2F
             &__btn
-                display: none
+                width: 60px
+                height: 100px
             &__image
-                width: 95%
+                width: 100%
                 height: 300px
+                object-position: 0 30%
         &-wrapper
             align-items: flex-start
     .cost
@@ -535,6 +551,7 @@
                 justify-content: space-between
                 align-items: flex-start
                 padding: 20px 15px
+                border-radius: 10px
             &__title
                 font-size: 20px
                 line-height: 140%
@@ -601,6 +618,8 @@
             &__image
                 width: 60px
                 height: 60px
+        &--prev
+            top: 20%
     .photos
         padding-bottom: 40px
         &__title

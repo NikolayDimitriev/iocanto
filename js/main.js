@@ -166,7 +166,7 @@ jQuery(document).ready(function(){
 
         const movie = document.createElement('div');
         movie.innerHTML = `
-            <iframe width="${width}" height="${height}" src="https://www.youtube.com/embed/-nVJH76NJ4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="${width}" height="${height}" src="https://www.youtube.com/embed/6_y0Hz36WK8?controls=0&autoplay=1&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         `;
         movie.style.cssText = `
             width: 100%;
@@ -216,7 +216,7 @@ jQuery(document).ready(function(){
         breakpoints: {
             // when window width is >= 320px
             320: {
-              slidesPerView: 1,
+              slidesPerView: 1.1,
               spaceBetween: 10
             },
             687: {
@@ -271,6 +271,7 @@ jQuery(document).ready(function(){
         const srcH = item.getAttribute('data-image-src');
         const parent = item.previousElementSibling;
         const tab = item.parentNode.nextElementSibling;
+        const tabUp = item.parentNode;
 
         item.addEventListener('click', () => {
             const index = item.src.indexOf("img/");
@@ -279,11 +280,13 @@ jQuery(document).ready(function(){
             {
                 item.src = srcH;
                 parent.style.color = '#FEDA2F';
+                tabUp.style.borderRadius = '10px 10px 0 0';
                 tab.style.display = 'block';
             }
             else {
                 item.src = src;
                 parent.style.color = '#fff';
+                tabUp.style.borderRadius = '10px';
                 tab.style.display = 'none';
             }
         });
@@ -311,13 +314,38 @@ jQuery(document).ready(function(){
                 item.src = src;
 
         });
+
+        item.addEventListener('click', event => {
+            const target = event.target;
+            const parent = target.parentNode;
+            const idMovie = parent.getAttribute('data-id-video');
+
+            const movie = document.createElement('div');
+            movie.innerHTML = `
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${idMovie}?cc_load_policy=1&autoplay=1&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            `;
+
+            movie.style.cssText = `
+                width: 100%;
+                height: 100%;
+            `;
+
+            parent.innerHTML = '';
+
+            parent.appendChild(movie);
+        });
     });
 
     const swiperResult = new Swiper('.result-swiper', {
-        loop: false,
+        loop: true,
         direction: 'horizontal',
         slidesPerView: 3,
         spaceBetween: 80,
+
+        navigation: {
+            nextEl: '.result--next',
+            prevEl: '.result--prev',
+        },
 
         breakpoints: {
             // when window width is >= 320px
