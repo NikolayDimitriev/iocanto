@@ -1311,8 +1311,9 @@ img {
 .video-wrapper {
   border-radius: 20px;
   color: #fff;
-  background: #000 url("../img/bg-image.png") no-repeat;
+  background: #000 url("../img/video/video-bg.jpg") no-repeat;
   background-size: cover;
+  background-position: 0;
 }
 
 .video-wrapper__block {
@@ -3643,7 +3644,7 @@ img {
   }
   .team-block__btn {
     width: 60px;
-    height: 100px;
+    height: 120px;
   }
   .team-block__image {
     width: 100%;
